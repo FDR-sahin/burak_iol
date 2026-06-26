@@ -73,7 +73,7 @@ function Navbar() {
               )}
             </svg>
           </button>
-         <Link to='products'>
+         <Link to='checkout'>
             <Button/>
          </Link>
          

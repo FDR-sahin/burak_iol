@@ -47,22 +47,22 @@ function Contact() {
     }
   };
 
- useEffect(() => {
-  get(child(ref(db), "users/details"))
-    .then((snapshot) => {
-      console.log(snapshot.val());
-    });
-}, []);
+//  useEffect(() => {
+//   get(child(ref(db), "users/details"))
+//     .then((snapshot) => {
+//       console.log(snapshot.val());
+//     });
+// }, []);
 
- useEffect(() => {
-  const starCountRef = ref(db, "users/details/-OvulgJONAlPhvLDAnPD");
+//  useEffect(() => {
+//   const starCountRef = ref(db, "users/details/-OvulgJONAlPhvLDAnPD");
 
-  onValue(starCountRef, (snapshot) => {
-    if (snapshot.exists()) {
-      setMess(snapshot.val());
-    }
-  });
-}, []);
+//   onValue(starCountRef, (snapshot) => {
+//     if (snapshot.exists()) {
+//       setMess(snapshot.val());
+//     }
+//   });
+// }, []);
 
   return (
     <div className="container-custom py-16">
@@ -189,7 +189,7 @@ function Contact() {
         >
           <div>
             <label className="block text-sm font-medium text-charcoal-600 mb-1">
-              Naam
+              Name
             </label>
             <input
               type="text"
@@ -234,7 +234,6 @@ function Contact() {
           </button>
         </motion.form>
 
-       <p> Welcome {mess?.name} {mess?.address}</p>
       </div>
     </div>
   );

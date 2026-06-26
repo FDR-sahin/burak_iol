@@ -1,14 +1,14 @@
 // Dummy product data — backend theke asholay API call kore replace kora hobe
 
-import p1 from '../assets/p1.jpg'
-import p2 from '../assets/p2.jpg'
-import p3 from '../assets/p3.jpg'
-import p4 from '../assets/p4.jpg'
-import p5 from '../assets/p5.jpg'
+import p1 from '../assets/chul1.jpg'
+import p2 from '../assets/bath1.jpg'
+import p3 from '../assets/bath2.jpg'
+import p4 from '../assets/bath3.jpg'
+import p5 from '../assets/chul2.jpg'
 
-import p6 from '../assets/p6.jpg'
-import p7 from '../assets/p7.jpg'
-import p8 from '../assets/p8.jpg'
+import p6 from '../assets/combo1.jpg'
+import p7 from '../assets/combo2.jpg'
+import p8 from '../assets/chombo3.jpg'
 
 
 const products = [

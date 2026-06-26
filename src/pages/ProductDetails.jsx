@@ -103,7 +103,7 @@ function ProductDetails() {
             </div>
 
             <button onClick={handleAddToCart} className="btn-primary flex-1">
-              {added ? "Cart-e jog hoyeche ✓" : "Cart-e dhin"}
+              {added ? "Add To Cart Done ✓" : "Add To Cart"}
             </button>
           </div>
 

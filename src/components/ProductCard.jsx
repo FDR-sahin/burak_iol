@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../store/slices/cartSlice";
 import StarRating from "./StarRating";
 
 function ProductCard({ product }) {
   const dispatch = useDispatch();
+
+  
+
 
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -14,6 +17,19 @@ function ProductCard({ product }) {
   const discount = Math.round(
     ((product.oldPrice - product.price) / product.oldPrice) * 100
   );
+
+  const navigate = useNavigate();
+  const handleBuyNow = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  navigate("/checkout", {
+    state: {
+      product,
+      quantity: 1,
+    },
+  });
+};
 
   return (
     <Link
@@ -58,12 +74,21 @@ function ProductCard({ product }) {
               </span>
             )}
           </div>
+          <div className="flex gap-2">
+            <button
+            
+            onClick={handleBuyNow}
+            className="bg-red-500 hover:bg-red-600 text-white text-sm font-medium px-3 py-2 rounded-full transition-colors"
+          >
+            Bye Now
+          </button>
           <button
             onClick={handleAddToCart}
             className="bg-green-500 hover:bg-green-600 text-white text-sm font-medium px-3 py-2 rounded-full transition-colors"
           >
             Add To Cart
           </button>
+          </div>
         </div>
       </div>
     </Link>

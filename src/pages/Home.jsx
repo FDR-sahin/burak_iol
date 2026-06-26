@@ -3,18 +3,18 @@ import { useSelector } from "react-redux";
 import { selectAllProducts } from "../store/slices/productsSlice";
 import ProductCard from "../components/ProductCard";
 import ReviewSlider from "../components/ReviewSlider";
-import hero from "../assets/hero.jpg";
+import hero from "../assets/home1.jpg";
 import { default as Marquee } from "react-fast-marquee";
 import { motion, AnimatePresence } from "framer-motion";
-import la from "../assets/last.jpg";
+import la from "../assets/aboutlogo.png";
 
-import f1 from "../assets/f1.jpg";
-import f2 from "../assets/f2.jpg";
-import f3 from "../assets/f3.jpg";
-import f4 from "../assets/f4.jpg";
-import f5 from "../assets/f5.jpg";
-import f6 from "../assets/f6.jpg";
-import f7 from "../assets/f7.jpg";
+import f1 from "../assets/r1.jpg";
+import f2 from "../assets/r2.jpg";
+import f3 from "../assets/r3.jpg";
+import f4 from "../assets/r4.jpg";
+import f5 from "../assets/r5.jpg";
+import f6 from "../assets/r6.jpg";
+import f7 from "../assets/r7.jpg";
 
 const features = [
   {
@@ -42,40 +42,7 @@ function Home() {
   return (
     <div>
       <section className="bg-mustard-50">
-        {/* <div className="container-custom py-10 sm:py-5 grid sm:grid-cols-2 gap-10 items-center">
-          <div>
-            <span className="inline-block bg-herbal-50 text-herbal-600 text-sm font-medium px-3 py-1 rounded-full mb-4">
-              100% Prakritik o Khati
-            </span>
-            <h1 className="text-3xl sm:text-5xl font-display font-bold text-charcoal-800 leading-tight">
-              Khati sorshe-r tel,
-              <span className="text-mustard-400"> batha komano</span> o chul-er
-              jotno-r jonno
-            </h1>
-            <p className="text-charcoal-400 mt-5 text-lg">
-              Purono dini protha onujayi toiri amader sorshe-r tel apnar gay-er
-              batha o chul porar shomossar prakritik somadhan.
-            </p>
-            <div className="flex flex-wrap gap-4 mt-8">
-              <Link to="/products" className="btn-primary">
-                Shob Product Dekhun
-              </Link>
-              <Link to="/about" className="btn-outline">
-                Aro Janun
-              </Link>
-            </div>
-          </div>
-
-          <div className="relative">
-            <img
-              src={hero}
-              alt="Khati sorshe-r tel bottle"
-              className="rounded-xl2 w-full object-cover aspect-[4/3]"
-            />
-          </div>
-          
-        </div> */}
-
+        {/* //ratul */}
         <div className="container-custom py-10 sm:py-5 grid sm:grid-cols-2 gap-10 items-center">
           {/* LEFT TEXT SIDE */}
           <motion.div
@@ -256,23 +223,30 @@ function Home() {
 
       <ReviewSlider />
 
-      <section
-        style={{ backgroundImage: `url(${la})` }}
-        className="w-full bg-cover bg-center bg-no-repeat"
-      >
-        <div className="container-custom py-12 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <h2 className="text-2xl font-display font-semibold text-amber-200 text-center sm:text-left">
-            Ajkei try korun amader bural oil
-          </h2>
+     
 
-          <Link
-            to="/products"
-            className="bg-black text-mustard-300 font-display font-semibold px-6 py-3 rounded-full hover:bg-charcoal-50 transition-colors"
-          >
-            Order Korun
-          </Link>
-        </div>
-      </section>
+     <section
+  style={{ backgroundImage: `url(${la})` }}
+  className="relative w-full h-[20vh] bg-cover bg-center bg-no-repeat"
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  {/* Content */}
+  <div className="relative container-custom py-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <h2 className="text-3xl font-display font-semibold text-amber-400 text-center sm:text-left">
+      Ajkei try korun amader Burak Oil
+    </h2>
+
+    <Link
+      to="/products"
+      className="bg-black text-mustard-200 font-display font-semibold px-6 py-3 rounded-full hover:bg-charcoal-50 hover:text-black transition-colors"
+    >
+      Order Korun
+    </Link>
+  </div>
+</section>
+
     </div>
   );
 }
